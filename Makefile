@@ -287,6 +287,11 @@ build: manifests generate fmt vet ## Build manager binary.
 DEFAULT_RUN_FLAGS ?= --zap-devel --provider inmemory,aws,google,azure,coredns,endpoint
 RUN_FLAGS ?= $(DEFAULT_RUN_FLAGS)
 
+.PHONY: build-plugin
+build-plugin: ## build executable
+	go build -o bin/kubectl-dns cmd/plugin/*.go
+	@echo "To embed plugin in kubectl add ./bin to your PATH"
+
 .PHONY: run
 run: GIT_SHA=$(shell git rev-parse HEAD || echo "unknown")
 run: DIRTY=$(shell hack/check-git-dirty.sh || echo "unknown")
