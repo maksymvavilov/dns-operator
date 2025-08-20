@@ -2,9 +2,11 @@
 
 name: Delete Release Helm Chart
 on:
-  release:
-    types:
-      - deleted
+#  release:
+#    types:
+#      - deleted
+  workflow_dispatch:
+
 jobs:
   delete_chart_release:
     runs-on: ubuntu-latest
