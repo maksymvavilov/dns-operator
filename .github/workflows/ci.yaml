@@ -1,18 +1,18 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - main
-      - "release-*"
-    tags:
-      - "v[0-9]+.[0-9]+.[0-9]+"
-  pull_request:
-    branches:
-      - main
-      - "release-*"
-  merge_group:
-    types: [checks_requested]
+#  push:
+#    branches:
+#      - main
+#      - "release-*"
+#    tags:
+#      - "v[0-9]+.[0-9]+.[0-9]+"
+#  pull_request:
+#    branches:
+#      - main
+#      - "release-*"
+#  merge_group:
+#    types: [checks_requested]
   workflow_dispatch:
 
 jobs:
