@@ -1,10 +1,10 @@
 name: Build and Publish CoreDNS Images
 
 on:
-  push:
-    branches:
-      - main
-      - "release-*"
+#  push:
+#    branches:
+#      - main
+#      - "release-*"
   workflow_dispatch:
 
 env:
