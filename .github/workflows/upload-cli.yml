@@ -3,10 +3,15 @@ on:
   release:
     types:
       - published
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  packages: write
 
 jobs:
   release-matrix:
-    name: Release dns-operator CLI Binary
+    name: Upload dns-operator CLI Binary
     runs-on: ubuntu-latest
     strategy:
       matrix:
